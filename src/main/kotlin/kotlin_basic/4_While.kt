@@ -1,3 +1,5 @@
+package kotlin_basic
+
 fun main() {
 
     // 자바의 while 문과 동일

@@ -1,4 +1,4 @@
-
+package kotlin_basic
 class Product(val name:String, val price: Int)
 
 interface Wheel {

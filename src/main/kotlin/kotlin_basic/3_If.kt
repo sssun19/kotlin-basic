@@ -1,3 +1,5 @@
+package kotlin_basic
+
 fun main() {
 
     //if..else 사용

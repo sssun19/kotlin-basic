@@ -1,3 +1,5 @@
+package kotlin_basic
+
 import java.lang.IllegalArgumentException
 
 fun main() {

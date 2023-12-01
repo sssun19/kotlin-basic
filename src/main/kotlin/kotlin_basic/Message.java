@@ -1,3 +1,5 @@
+package kotlin_basic;
+
 public class Message {
 
     public void greeting(String message) {

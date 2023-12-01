@@ -1,4 +1,4 @@
-import java.lang.NullPointerException
+package kotlin_basic
 
 fun getNullStr() : String? = null
 

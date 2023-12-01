@@ -1,3 +1,5 @@
+package kotlin_basic;
+
 public class Logger {
 
     public void log(String level, String message) {

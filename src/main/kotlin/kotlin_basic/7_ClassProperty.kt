@@ -1,4 +1,4 @@
-
+package kotlin_basic
 class Coffee(
     var name: String = "아이스 커피",
     var price : Int = 200,

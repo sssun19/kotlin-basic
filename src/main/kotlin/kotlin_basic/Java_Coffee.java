@@ -1,3 +1,5 @@
+package kotlin_basic;
+
 public class Java_Coffee {
 
     private boolean isIced;
