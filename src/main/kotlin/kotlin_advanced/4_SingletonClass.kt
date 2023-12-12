@@ -19,12 +19,35 @@ data class FrontendDeveloper(override val name: String) : Developer() {
     }
 }
 
+object OtherDeveloper : Developer() {
+    override val name: String = "익명"
+
+    override fun code(language: String) {
+        TODO("Not yet implemented")
+    }
+}
+
+data class AndroidDeveloper(override val name: String) : Developer(){
+    override fun code(language: String) {
+        println("저는 안드로이드 개발자입니다 $language 를 사용합니다.")
+    }
+}
+
+data class IosDeveloper(override val name: String) : Developer(){
+    override fun code(language: String) {
+        println("저는 IOS 개발자입니다 $language 를 사용합니다.")
+    }
+}
+
 object DeveloperPool {
     val pool = mutableMapOf<String, Developer>()
 
     fun add(developer: Developer) = when(developer) {
         is BackendDeveloper -> pool[developer.name] = developer
         is FrontendDeveloper -> pool[developer.name] = developer
+        is OtherDeveloper -> println("지원하지 않는 개발자 종류입니다.")
+        is AndroidDeveloper -> pool[developer.name] = developer
+        is IosDeveloper -> pool[developer.name] = developer
     }
 
     fun get(name: String) = pool[name]
@@ -41,4 +64,10 @@ fun main(){
 
     println(DeveloperPool.get("sssun"))
     println(DeveloperPool.get("hoshi"))
+
+    val androidDeveloper = AndroidDeveloper(name="안드로")
+    DeveloperPool.add(androidDeveloper)
+
+    println(DeveloperPool.get("안드로"))
+
 }
