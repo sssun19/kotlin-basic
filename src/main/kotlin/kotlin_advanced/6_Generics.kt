@@ -6,11 +6,19 @@ class MyGenerics<out T>(val t: T) {
 
 class Bag<T> {
 
+    private val items: MutableList<T> = mutableListOf()
+
     fun saveAll(
         to: MutableList<in T>,
         from: MutableList<T>,
     ) {
+        //items.addAll(to)
+        //items.addAll(from)
         to.addAll(from)
+    }
+
+    fun getItems(): List<T> {
+        return items.toList()
     }
 
 }
@@ -23,6 +31,9 @@ fun main() {
 
     val bag = Bag<String>()
     bag.saveAll(mutableListOf<CharSequence>("1", "2"), mutableListOf<String>("3","4"))
+
+//    val itemsInBag = bag.getItems()
+//    println(itemsInBag)
 
 
     //val generics = MyGenerics("테스트")// 어차피 인자로 String 타입을 받기 때문에 <T> 에 String 자동 추론 가능
