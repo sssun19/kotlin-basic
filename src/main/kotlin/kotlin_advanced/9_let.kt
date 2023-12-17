@@ -34,4 +34,20 @@ fun main() {
     }
 
     println(result)
+
+    //this - it 차이점
+//    val this: String? = null
+//    val it: String? = null
+
+    val hello = "hello"
+    val hi = "hi"
+
+    hello.let {a : String ->
+//        println(a.length)
+
+        hi.let {b: String ->
+            println(a.length)
+            println(b.length)
+        }
+    }
 }

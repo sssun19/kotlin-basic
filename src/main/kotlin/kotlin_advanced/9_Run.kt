@@ -44,4 +44,14 @@ fun main() {
 
     println(connected)
 
+    val result : Boolean = with(DatabaseClient()) {
+        this.url = "localhost:3306"
+        username = "mysql"
+        password = "1234"
+
+        connect()
+    }
+
+    println(result)
+
 }
